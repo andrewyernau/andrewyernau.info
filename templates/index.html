@@ -1,0 +1,63 @@
+{% extends 'layout.html' %} {% block content %}
+<link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap"
+    />
+<div>
+  <div class="terminal-prompt">
+    <span class="prompt-user">andrewyernau@portfolio:~$</span>
+    <div id="loading-message">
+      <div class="command-prompt">
+        <span class="command-text">{{section}}</span>
+      </div>
+    </div>
+  </div>
+  <div id="content" style="display: none"></div>
+</div>
+
+<script>
+  function loadSection(url) {
+    let loadingMessage = document.getElementById("loading-message");
+    let content = document.getElementById("content");
+
+    if (loadingMessage) {
+      let commandText = loadingMessage.querySelector(".command-text");
+      if (commandText) {
+        const commands = {
+          "/userinfo": "Cargando usuario...",
+          "/aboutme": "cat sobre-mi.txt",
+          "/profession": "less profesion.md",
+          "/projects": "ls -la ./proyectos/",
+          "/misc": "find ./misc -type f | sort",
+        };
+        commandText.textContent = commands[url] || "comando...";
+      }
+
+      loadingMessage.style.display = "block";
+    }
+
+    content.style.display = "none";
+
+    setTimeout(() => {
+      if (loadingMessage) {
+        loadingMessage.style.display = "none";
+      }
+
+      content.setAttribute("hx-get", url);
+      content.setAttribute("hx-trigger", "load");
+      content.setAttribute("hx-swap", "innerHTML");
+      content.style.display = "block";
+      htmx.process(content);
+    }, 750);
+  }
+  document.querySelectorAll("nav a").forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      let sectionUrl = this.getAttribute("hx-get");
+      loadSection(sectionUrl);
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => loadSection("/userinfo"));
+</script>
+{% endblock %}
