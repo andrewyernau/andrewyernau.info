@@ -59,14 +59,26 @@
     <div class="misc-item image-gallery">
         <h3>Galería de imágenes</h3>
         <div class="gallery-container">
-            <button id="prev-image" class="gallery-nav-btn">&lt;</button>
-            <div class="image-container">
-                <img id="gallery-current-image" src="/images/placeholder.jpg" alt="Imagen de galería">
-                <p id="image-caption">Cargando imágenes...</p>
+            <button hx-get="/api/gallery-image/prev" 
+                    hx-target="#gallery-content" 
+                    hx-swap="innerHTML"
+                    class="gallery-nav-btn">&lt;</button>
+                    
+            <div id="gallery-content" class="image-container">
+                <div hx-get="/api/gallery-image/current" 
+                     hx-trigger="load"
+                     hx-swap="outerHTML">
+                    <p>Cargando imagen...</p>
+                </div>
             </div>
-            <button id="next-image" class="gallery-nav-btn">&gt;</button>
+            
+            <button hx-get="/api/gallery-image/next" 
+                    hx-target="#gallery-content" 
+                    hx-swap="innerHTML"
+                    class="gallery-nav-btn">&gt;</button>
         </div>
     </div>
+    
     
     
   <br />
