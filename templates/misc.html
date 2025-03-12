@@ -25,62 +25,71 @@
     </div>
 
     <div class="misc-item">
-        <h3>Idiomas</h3>
-        <p>
-          Soy bilingüe en español e inglés, y tengo un nivel intermedio de francés
-          y un nivel principiante de chino. Además, hablo ruso a nivel nativo.
-        </p>
-      </div>
+      <h3>Idiomas</h3>
+      <p>
+        Soy bilingüe en español e inglés, y tengo un nivel intermedio de francés
+        y un nivel principiante de chino. Además, hablo ruso a nivel nativo.
+      </p>
     </div>
+  </div>
 
-    <br>
-    <div class="misc-item">
-      <h3>Contacto</h3>
-      <p>Puedes encontrarme en:</p>
-      <ul class="contact-links">
-        <li>
-          <a href="https://github.com/tu-usuario" target="_blank">GitHub</a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/andr%C3%A9-yermak-naumenko-b8489a21a/"
-            target="_blank"
-            >LinkedIn</a
-          >
-        </li>
-        <li>
-          <a href="mailto:andrewyernau@andrewyernau.info" target="_blank"
-            >Email</a
-          >
-        </li>
-      </ul>
-    </div>
+  <br />
+  <div class="misc-item">
+    <h3>Contacto</h3>
+    <p>Puedes encontrarme en:</p>
+    <ul class="contact-links">
+      <li>
+        <a href="https://github.com/tu-usuario" target="_blank">GitHub</a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/andr%C3%A9-yermak-naumenko-b8489a21a/"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </li>
+      <li>
+        <a href="mailto:andrewyernau@andrewyernau.info" target="_blank"
+          >Email</a
+        >
+      </li>
+    </ul>
+  </div>
 
-    <div class="misc-item image-gallery">
-        <h3>Galería de imágenes</h3>
-        <div class="gallery-container">
-            <button hx-get="/api/gallery-image/prev" 
-                    hx-target="#gallery-content" 
-                    hx-swap="innerHTML"
-                    class="gallery-nav-btn">&lt;</button>
-                    
-            <div id="gallery-content" class="image-container">
-                <div hx-get="/api/gallery-image/current" 
-                     hx-trigger="load"
-                     hx-swap="outerHTML">
-                    <p>Cargando imagen...</p>
-                </div>
-            </div>
-            
-            <button hx-get="/api/gallery-image/next" 
-                    hx-target="#gallery-content" 
-                    hx-swap="innerHTML"
-                    class="gallery-nav-btn">&gt;</button>
+  <!-- <br />
+  <div class="misc-item image-gallery">
+    <h3>Galería de imágenes</h3>
+    <div class="gallery-container">
+      <button
+        hx-get="/api/gallery-image/prev"
+        hx-target="#gallery-content"
+        hx-swap="innerHTML"
+        class="gallery-nav-btn"
+      >
+        &lt;
+      </button>
+
+      <div id="gallery-content" class="image-container">
+        <div
+          hx-get="/api/gallery-image/current"
+          hx-trigger="load"
+          hx-swap="outerHTML"
+        >
+          <p>Cargando imagen...</p>
         </div>
+      </div>
+
+      <button
+        hx-get="/api/gallery-image/next"
+        hx-target="#gallery-content"
+        hx-swap="innerHTML"
+        class="gallery-nav-btn"
+      >
+        &gt;
+      </button>
     </div>
-    
-    
-    
+  </div> -->
+
   <br />
   <div class="cursor-blink"></div>
 </section>

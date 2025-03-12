@@ -253,7 +253,7 @@ ul {
     max-width: calc(50% - 20px);
 }
 
-.image-gallery {
+/* .image-gallery {
     width: 100%;
 }
 
@@ -297,7 +297,7 @@ ul {
 #image-caption {
     margin-top: 10px;
     font-style: italic;
-}
+} */
 
 .contact-links {
     list-style-type: none;

@@ -7,19 +7,25 @@ use actix_web::{
     use chrono::Datelike;
     
     lazy_static! {
-    pub static ref TEMPLATES: Tera = {
-    let mut tera = Tera::new("templates/**/*").unwrap();
-    tera.autoescape_on(vec!["html", "htm"]);
-    tera
-    };
+        pub static ref TEMPLATES: Tera = {
+            let mut tera = match Tera::new("templates/**/*") {
+                Ok(t) => t,
+                Err(e) => {
+                    println!("Error parsing templates: {}", e);
+                    ::std::process::exit(1);
+                }
+            };
+            tera.autoescape_on(vec![".html", ".htm"]);
+            tera
+        };
     }
     
     #[get("/")]
     async fn index() -> impl Responder {
-    let mut context = tera::Context::new();
-    context.insert("section", "Cargando usuario...");
-    let page_content = TEMPLATES.render("index.html", &context).unwrap();
-    HttpResponse::Ok().body(page_content)
+        let mut context = tera::Context::new();
+        context.insert("section", "userinfo");
+        let page_content = TEMPLATES.render("index.html", &context).unwrap();
+        HttpResponse::Ok().body(page_content)
     }
     
     #[get("/year")]
@@ -76,7 +82,7 @@ use actix_web::{
     .service(misc)
     .service(year)
     .service(Files::new("/static", "./static").prefer_utf8(true))})
-    .bind(("127.0.0.1", 8080))?
+    .bind(("127.0.0.1", 8880))?
     .run()
     .await
     }
