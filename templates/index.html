@@ -1,63 +1,67 @@
-{% extends 'layout.html' %} {% block content %}
-<link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap"
-    />
-<div>
-  <div class="terminal-prompt">
-    <span class="prompt-user">andrewyernau@portfolio:~$</span>
-    <div id="loading-message">
-      <div class="command-prompt">
-        <span class="command-text">{{section}}</span>
+{% extends "base.html" %}
+{% block title %}Andrewyernau | Portfolio{% endblock %}
+{% block content %}
+  <section class="hero">
+    <h1 class="logo-h1">Andre Yermak Naumenko</h1>
+    <div class="typewriter">
+      <div>
+        <p>Ingeniería de redes seguras, desarrollo en Rust, blockchain e IA 
+          para soluciones innovadoras y escalables.
+        </p>
       </div>
     </div>
+  </section>
+
+  <section class="stats" id="stats">
+    <div class="stat">
+      <span class="number" data-target="1">0</span>
+      <p>Años de experiencia</p>
+    </div>
+    <div class="stat">
+      <span class="number" data-target="10">0</span>
+      <p>Proyectos completados</p>
+    </div>
+    <div class="stat">
+      <span class="number" data-target="315">0</span>
+      <p>Commits en GitHub</p>
+    </div>
+  </section>
+
+  <section class="skills">
+  <h2>Lenguajes de programación</h2>
+  <div class="skills-grid">
+    <div class="skill">Rust</div>
+    <div class="skill">Python</div>
+    <div class="skill">Java</div>
+    <div class="skill">HTML</div>
+    <div class="skill">VHDL</div>
+    <div class="skill">asm</div>
+    <div class="skill">SQL</div>
   </div>
-  <div id="content" style="display: none"></div>
-</div>
 
-<script>
-  function loadSection(url) {
-    let loadingMessage = document.getElementById("loading-message");
-    let content = document.getElementById("content");
+  <h2>Frameworks</h2>
+  <div class="skills-grid">
+    <div class="skill">Actix</div>
+    <div class="skill">React</div>
+    <div class="skill">ASP.NET</div>
+  </div>
 
-    if (loadingMessage) {
-      let commandText = loadingMessage.querySelector(".command-text");
-      if (commandText) {
-        const commands = {
-          "/userinfo": "Cargando usuario...",
-          "/aboutme": "cat sobre-mi.txt",
-          "/profession": "less profesion.md",
-          "/projects": "ls -la ./proyectos/",
-          "/misc": "find ./misc -type f | sort",
-        };
-        commandText.textContent = commands[url] || "comando...";
-      }
+  <h2>Herramientas de desarrollador</h2>
+  <div class="skills-grid">
+    <div class="skill">Git</div>
+    <div class="skill">GitHub</div>
+    <div class="skill">Docker</div>
+    <div class="skill">Vim</div>
+    <div class="skill">Bash | PS</div>
+    <div class="skill">Linux</div>
+  </div>
 
-      loadingMessage.style.display = "block";
-    }
-
-    content.style.display = "none";
-
-    setTimeout(() => {
-      if (loadingMessage) {
-        loadingMessage.style.display = "none";
-      }
-
-      content.setAttribute("hx-get", url);
-      content.setAttribute("hx-trigger", "load");
-      content.setAttribute("hx-swap", "innerHTML");
-      content.style.display = "block";
-      htmx.process(content);
-    }, 750);
-  }
-  document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      let sectionUrl = this.getAttribute("hx-get");
-      loadSection(sectionUrl);
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", () => loadSection("/userinfo"));
-</script>
+  <h2>Intereses</h2>
+  <div class="skills-grid">
+    <div class="skill">IA | ML</div>
+    <div class="skill">Seguridad y redes</div>
+    <div class="skill">Automatización</div>
+    <div class="skill">Blockchain</div>
+  </div>
+</section>
 {% endblock %}

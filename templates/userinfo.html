@@ -1,49 +1,30 @@
-<section id="content" class="terminal-section active terminal-output">
-  <div class="terminal-output">
-    <h1>andrewyernau.info</h1>
+{% extends "base.html" %}
+{% block title %}User Info | Portfolio{% endblock %}
+{% block content %}
+  <section id="userinfo">
+    <h2>Información de contacto</h2>
     <p>
-      ¡Bienvenido a mi portfolio! Aquí encontrarás información sobre quién soy, 
-      a qué me dedico y otros detalles que pueden interesarte.
+      Para contactar conmigo, puede ser a través de los siguientes medios:
     </p>
-    <p>El contenido está organizado en las siguientes secciones:</p>
-    
-    <div class="subtitle">
-      <ul>
-        <li> <a
-          href="#"
-          hx-get="/aboutme"
-          hx-target="#content"
-          hx-swap="innerHTML"
-          hx-trigger="click"
-          >whoami</a> – Un poco sobre mí.</li>
-        <li> <a
-          href="#"
-          hx-get="/profession"
-          hx-target="#content"
-          hx-swap="innerHTML"
-          hx-trigger="click"
-          >job</a> – Experiencia y proyectos.</li>
-        <li> <a
-          href="#"
-          hx-get="/projects"
-          hx-target="#content"
-          hx-swap="innerHTML"
-          hx-trigger="click"
-          >proyectos</a> – Mis trabajos destacados.</li>
-        <li> <a
-          href="#"
-          hx-get="/misc"
-          hx-target="#content"
-          hx-swap="innerHTML"
-          hx-trigger="click"
-          >misc</a> – Cosas varias que pueden interesarte.</li>
-      </ul>
-    </div>
-
+    <ul>
+      <li><strong>Linkedin:</strong><a 
+        href="https://www.linkedin.com/in/andr%C3%A9-yermak-naumenko-b8489a21a/" 
+        target="_blank">
+        André Yermak Naumenko
+      </a></li>
+      <li><strong>Email:</strong> contact@andrewyernau.info</li>
+    </ul>
+    <br>
+    <h2>Información adicional</h2>
     <p>
-      Explora cada sección para conocer más. Puedes empezar haciendo clic en cualquiera de los enlaces de arriba.  
+      Si desea ver más información sobre mí, como mi currículum o proyectos 
+      específicos, puede visitar mi perfil de GitHub:
     </p>
-    
-    <div class="cursor-blink"></div>
-  </div>
-</section>
+    <ul>
+      <li><strong>GitHub:</strong> <a 
+        href="https://github.com/andrewyernau" target="_blank">andrewyernau
+      </a>
+      </li>
+    </ul>
+  </section>
+{% endblock %}

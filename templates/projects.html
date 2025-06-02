@@ -1,97 +1,78 @@
-<section id="content" class="terminal-section active terminal-output">
-  <h2>Proyectos</h2>
-  <p>Algunos de mis proyectos destacados:</p>
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <h3 class="project-title">andrewyernau.info</h3>
-      <p class="project-description">
-        Este portfolio sirve como escaparate de mis conocimientos en Rust, HTMX y despliegue web. 
-      </p>
-      <p class="project-description">
-        Está containerizado con Docker y se ejecuta en un servidor propio con Nginx, lo que me ha permitido experimentar con autoalojamiento y optimización de rendimiento.
-      </p>
-      <div class="project-tags">
-        <span class="tag">HTMX</span>
-        <span class="tag">CSS</span>
-        <span class="tag">Rust</span>
-        <span class="tag">Docker</span>
-        <span class="tag">Nginx</span>
+{% extends "base.html" %}
+{% block title %}Proyectos | Portfolio{% endblock %}
+{% block content %}
+  <section id="projects">
+    <h2>Proyectos Destacados</h2>
+    <section class="featured-projects-section" id="featured-projects">
+      <div class="project-highlight-card">
+        <h2 class="ph-card-title">andrewyernau.info</h2>
+        <p class="ph-card-subtitle">
+          Este portfolio sirve como escaparate de mis conocimientos
+          en Rust, HTMX y despliegue web.
+        </p>
+        <p class="ph-card-description">
+          Está containerizado con Docker y se ejecuta en un servidor
+          propio con Nginx, lo que me ha permitido experimentar con
+          autoalojamiento y optimización de rendimiento.
+        </p>
       </div>
-      <a href="" class="project-link" target="_blank">Ver proyecto</a>
-    </div>
-
-    <div class="project-card">
-      <h3 class="project-title">ezplace.net</h3>
-      <p class="project-description">
-        Ezplace es una game network y plataforma web basada en React y Deno. 
-        La idea detrás del proyecto es demostrar la viabilidad del self-hosting, ya que gestiono toda la infraestructura desde cero.
-      </p>
-      <div class="project-tags">
-        <span class="tag">React</span>
-        <span class="tag">Docker</span>
-        <span class="tag">Self-host</span>
-        <span class="tag">API</span>
-        <span class="tag">SQL</span>
+    
+      <div class="project-highlight-card">
+        <h2 class="ph-card-title">ezplace.net</h2>
+        <p class="ph-card-subtitle">
+          Ezplace es una game network y plataforma web que desarrollé
+           utilizando React para el frontend y Deno para el backend,
+            con un fuerte enfoque en demostrar la viabilidad del self-hosting.
+          </p>
+        <p class="ph-card-description">
+          Gestiono personalmente toda la infraestructura subyacente,
+           desde la configuración del servidor hasta la API y las bases
+            de datos SQL, todo ello orquestado con Docker para facilitar
+             el despliegue y mantenimiento.
+            </p>
       </div>
-      <a href="https://ezplace.net" class="project-link" target="_blank">Ver proyecto</a>
-    </div>
-
-    <div class="project-card">
-      <h3 class="project-title">JavaPlugins</h3>
-      <p class="project-description">
-        Desarrollo de plugins en Java para servidores, optimizados para sincronizar datos en tiempo real con técnicas de caché, batch processing y SQL.
-      </p>
-      <p class="project-description">
-        También implementé un sistema de comunicación distribuida que permite interacción global y multicast para grupos específicos.
-      </p>
-      <div class="project-tags">
-        <span class="tag">Java</span>
-        <span class="tag">Cache</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Sync</span>
+    
+      <div class="project-highlight-card">
+        <h2 class="ph-card-title">JavaPlugins</h2>
+        <p class="ph-card-subtitle">
+          He dedicado tiempo al desarrollo de plugins en Java para servidores
+           de juegos, optimizados específicamente para la sincronización de datos
+            en tiempo real.
+          </p>
+        <p class="ph-card-description">
+          Para ello, implementé técnicas avanzadas como caché, batch processing
+           y consultas eficientes a bases de datos SQL, además de un sistema de
+            comunicación distribuida para interacciones globales y multicast.
+          </p>
       </div>
-      <a href="https://ezplace.net" class="project-link" target="_blank">Ver proyecto</a>
-    </div>
-
-    <div class="project-card">
-      <h3 class="project-title">ZedBoard y PIC16F876A</h3>
-      <p class="project-description">
-        Experimentos con VHDL y FPGA en una ZedBoard para gestionar señales como volumen y VGA, además de proyectos con el microcontrolador PIC16F876A.
-      </p>
-      <div class="project-tags">
-        <span class="tag">VHDL</span>
-        <span class="tag">FPGA</span>
-        <span class="tag">Assembly</span>
+    
+      <div class="project-highlight-card">
+        <h2 class="ph-card-title">ZedBoard y PIC16F876A</h2>
+        <p class="ph-card-subtitle">
+          Mi curiosidad por el hardware me ha llevado a experimentar con VHDL 
+          en una FPGA ZedBoard, donde he trabajado en la gestión y procesamiento 
+          de señales de vídeo VGA y audio.
+        </p>
+        <p class="ph-card-description">
+          Paralelamente, he desarrollado proyectos con el microcontrolador 
+          PIC16F876A programando directamente en ensamblador, lo que me ha 
+          proporcionado una comprensión profunda de la arquitectura de microcontroladores.
+        </p>
       </div>
-      <a href="https://github.com/andrewyernau/zedboard" class="project-link" target="_blank">Ver proyecto ZedBoard</a>
-      <a href="https://github.com/andrewyernau/assembly_exercises" class="project-link" target="_blank">Ver proyecto PIC16F876A</a>
-    </div>
-
-    <div class="project-card">
-      <h3 class="project-title">IMDB Alternative</h3>
-      <p class="project-description">
-        Plataforma colaborativa con Álvaro Hernández donde creamos un sistema de recomendación de películas basado en machine learning y similitud entre usuarios.
-      </p>
-      <div class="project-tags">
-        <span class="tag">HTML5</span>
-        <span class="tag">SQL</span>
-        <span class="tag">MATLAB</span>
-        <span class="tag">Machine Learning</span>
+    
+      <div class="project-highlight-card">
+        <h2 class="ph-card-title">IMDB Alternative</h2>
+        <p class="ph-card-subtitle">
+          En un proyecto colaborativo con Álvaro Hernández, creamos una plataforma 
+          alternativa a IMDB, enfocada en ofrecer un sistema de recomendación de 
+          películas personalizado.
+        </p>
+        <p class="ph-card-description">
+          Utilizamos algoritmos de machine learning y análisis de similitud entre 
+          usuarios implementados en MATLAB, con una base de datos SQL y una interfaz 
+          web desarrollada en HTML5.
+        </p>
       </div>
-      <a href="https://github.com/andrewyernau/movies-algorithm-web" class="project-link" target="_blank">Ver proyecto</a>
-    </div>
-
-    <div class="project-card">
-      <h3 class="project-title">Esto solo es el inicio</h3>
-      <p class="project-description">
-        Estos son solo algunos de mis proyectos. Puedes explorar más en mi GitHub y seguirme para ver en qué estoy trabajando.
-        ¡Esto solo es el principio!
-      </p>
-      <a href="https://github.com/andrewyernau" class="project-link" target="_blank">Ver más proyectos</a>
-    </div>
-
-  </div>
-  <br>
-  <div class="cursor-blink"></div>
-</section>
+    </section>
+  </section>
+{% endblock %}

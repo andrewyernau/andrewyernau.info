@@ -1,27 +1,82 @@
-<section id="content" class="terminal-section active terminal-output">
-  <h2>Formación Profesional</h2>
-  <p>
-    Desde el Bachillerato, me especialicé en tecnología industrial, adquiriendo experiencia en áreas como programación con Arduino, diseño asistido por ordenador con AutoCAD y el uso de otras herramientas técnicas.
-  </p>
-  <p>
-    Después de superar las pruebas de acceso a la universidad, comencé un grado en Economía. Sin embargo, al cabo de un año, me di cuenta de que ese camino no aprovechaba plenamente mis intereses y habilidades, por lo que decidí redirigir mi carrera.
-  </p>
-  
-  <p>
-    Tras una profunda reflexión, opté por estudiar Ingeniería Telemática en la Universidad Politécnica de Cartagena, donde he recibido una formación integral en electrónica, física y telecomunicaciones. A lo largo de mis estudios, he trabajado con diversas tecnologías, entre las que destaco:
-  </p>
-  <ul>
-    <li><strong>AutoCAD</strong>: Diseño de piezas con alta precisión.</li>
-    <li><strong>OrCAD</strong>: Simulación y desarrollo de circuitos electrónicos.</li>
-    <li><strong>Python, Java, MATLAB y SQL</strong>: Aplicación en áreas como machine learning, ciencia de datos, optimización matemática, gestión de bases de datos y desarrollo de comunicaciones con Sockets TCP y UDP.</li>
-    <li><strong>Simulink</strong>: Diseño y análisis de filtros de señales, facilitando la visualización de transmisiones de datos.</li>
-    <li><strong>Linux</strong>: Administración de servidores y programación de scripts en Bash, utilizados en simulación de tráfico y ciberseguridad.</li>
-  </ul>
-  <p>
-    Estas herramientas han sido clave tanto en mi formación académica como en el desarrollo de proyectos personales.
-  </p>
-  <p>
-    Además, durante este tiempo de reflexión, decidí perfeccionar mi inglés, lo que me permitió obtener el certificado C1 de Cambridge, un paso importante en mi crecimiento personal y profesional.
-  </p>
-  <div class="cursor-blink"></div>
-</section>
+{% extends "base.html" %}
+{% block title %}Trayectoria Profesional | Portfolio{% endblock %}
+{% block content %}
+  <section id="profession">
+    <h2>Formación Académica</h2>
+    <p>
+      Desde que era chiquillo, siempre me ha gustado el mundillo de la tecnología,
+      por eso siempre acababa eligiendo las ramas científicas y tecnológicas en mis estudios.
+      <br>
+      Desde la educación secundaria, comencé a programar proyectos sencillos y aprendí
+      crear maquetas con Arduino y protoboards, y diseñar en CAD algunas maquetas.
+    </p>
+    <br>
+    <p>
+      Mi primera elección universitaria fue el Grado de Economía, pero al poco tiempo me di cuenta de que no era mi lugar. 
+      Si es cierto que me gustaba lo que aprendía, pero no sentía que fuera mi verdadera vocación.
+      Es por eso que decidí cambiar y me trasladé al Grado de Ingeniería Telemática.
+      Ahí descubrí que estaba en mi lugar, donde pude aplicar mis habilidades y conocimientos
+      en física, matemáticas, programación...
+      Y he aprendido a utilizar ciertas herramientas siendo algunos los más destacados:
+    </p>
+    <ul>
+      <li><strong>Diseño y Simulación Electrónica:</strong>
+        <ul>
+          <li><strong>AutoCAD:</strong> Diseño preciso de componentes y planos técnicos.</li>
+          <li><strong>OrCAD:</strong> Diseño y simulaciones de circuitos electrónicos.</li>
+          <li><strong>Simulink:</strong> Modelar sistemas para filtrar señales.</li>
+        </ul>
+      </li>
+      <li><strong>Programación y Desarrollo de Software:</strong>
+        <ul>
+          <li><strong>Python, Java, MATLAB:</strong> Aplicados en proyectos de machine learning, 
+            ciencia de datos, optimización matemática, y desarrollo de aplicaciones de 
+            comunicación mediante Sockets TCP/UDP.</li>
+          <li><strong>SQL:</strong> Diseño y gestión de bases de datos relacionales.</li>
+        </ul>
+      </li>
+      <li><strong>Sistemas y Redes:</strong>
+        <ul>
+          <li><strong>Linux:</strong> Un sistema operativo que facilitaba el aprendizaje de 
+            seguridad en redes como es Kali, o un entorno donde poder simular con scripts 
+            de Bash tráfico de red, en este caso Fedora.</li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      Todas estas herramientas han sido fundamentales en mi formación académica y en la 
+      ejecución de proyectos personales.
+    </p>
+    <br>
+    <p>
+      Paralelamente, he ido perfeccionado mi nivel de inglés alcanzando así un nivel C1 
+      certificado por Cambridge en 2021.
+    </p>
+    <br>
+    <h2>Experiencia Profesional</h2>
+    <p>
+      Actualmente, ejerzo como <strong>profesor particular de música (piano) y ajedrez</strong>, 
+      actividades que desarrollo de forma independiente y que me permiten potenciar 
+      habilidades de comunicación, planificación y enseñanza adaptada.
+    </p>
+    <p>
+      Mis roles anteriores incluyen:
+    </p>
+    <ul>
+      <li>
+        <strong>Monitor de ajedrez</strong> en Educajedrez (Septiembre 2024 - Mayo 2025).
+        Responsable de la enseñanza y fomento del ajedrez.
+      </li>
+      <li>
+        <strong>Docente extraescolar de piano y ajedrez</strong> en el CEU San Pablo 
+        (Junio 2024 - Julio 2024).
+        Impartición de clases durante el periodo estival.
+      </li>
+    </ul>
+    <p>
+      Si bien estas experiencias se centran en la docencia, han fortalecido mis 
+      capacidades de comunicación efectiva, paciencia y adaptación, competencias valiosas en 
+      cualquier entorno profesional, incluyendo la ingeniería.
+    </p>
+  </section>
+{% endblock %}

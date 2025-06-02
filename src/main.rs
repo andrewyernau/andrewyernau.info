@@ -44,9 +44,10 @@ use actix_web::{
     
     #[get("/profession")]
     async fn profession() -> impl Responder {
-    let  context = tera::Context::new();
-    let page_content = TEMPLATES.render("profession.html", &context).unwrap();
-    HttpResponse::Ok().body(page_content)
+        let mut ctx = tera::Context::new();
+        ctx.insert("section", "profession");
+        let page = TEMPLATES.render("profession.html", &ctx).unwrap();
+        HttpResponse::Ok().body(page)
     }
     
     #[get("/projects")]

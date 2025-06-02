@@ -1,18 +1,39 @@
-<section id="content" class="terminal-section active terminal-output">
-  <h2>Misceláneo</h2>
-  <div class="misc-items">
-    <div class="misc-item">
-      <h3>Hobbies</h3>
-      <p>
-        Mi personalidad curiosa y polifacética me ha llevado a desarrollar una
-        amplia variedad de hobbies. Soy pianista profesional, practico ejercicio
-        con regularidad y disfruto del senderismo. Me apasionan los juegos de
-        mesa como el ajedrez, los videojuegos y la lectura.
-      </p>
-    </div>
-
-    <div class="misc-item">
-      <h3>Algunos de mis libros favoritos</h3>
+{% extends "base.html" %}
+{% block title %}Miscellaneous | Portfolio{% endblock %}
+{% block content %}
+  <section id="misc">
+    En esta sección comento algunas de las cosas que me gustan hacer pero aisladas del ámbito
+    profesional.
+    El por qué de esta sección no es más que mostrar una versión más personal de mí.
+    <br>
+    <br>
+    <h2>Un poco de mí</h2>
+    <p>
+      Soy una persona un tanto curiosa, de lejos, podría decirse que soy una persona muy fría,
+      tímida y algo borde (me lo han llegado a decir), pero dentro de mi círculo, soy una persona 
+      muy social y abierta y observadora.
+      <br>
+      Por otro lado, me encantan los animales, de hecho tengo una Border Collie llamada Ashly, 
+      me encanta viajar a nuevos lugares, hacer planes con amigos (sobre todo los improvisados), 
+      disfrutar de la gastronomía (es una excusa ya que soy bastante glotón), y también 
+      me relaja tocar obras de piano ya sea Jazz, piezas románticas, clásicas o modernas.
+      <br>
+      En general, me considero bastante tranquilo, sencillo y maduro, suelo resolver las 
+      situaciones de estrés con bastante calma y paciencia, evitando situaciones de conflicto.
+    </p>
+    <br>
+    <h2>Hobbies</h2>
+    <p>
+        Mi personalidad curiosa y polifacética me ha llevado a querer desarrollar una variedad 
+        de hobbies algo amplia.
+        <br>
+        Soy pianista profesional, practico ejercicio con regularidad y disfruto de deportes 
+        como pueden ser el ciclismo o running. 
+        <br>
+        Me apasionan los juegos de mesa como el ajedrez, los videojuegos y la lectura.
+    </p>
+    <br>
+    <h2>Algunos de mis libros favoritos</h2>
       <ul>
         <li><strong>Elantris</strong> - Brandon Sanderson</li>
         <li><strong>1984</strong> - George Orwell</li>
@@ -22,74 +43,39 @@
         <li><strong>El código Da Vinci</strong> - Dan Brown</li>
         <li><strong>Sistemas y señales</strong> - Alan V. Oppenheim</li>
       </ul>
-    </div>
-
-    <div class="misc-item">
-      <h3>Idiomas</h3>
+    <br>
+    <h2>Algunas de mis obras favoritas</h2>
+    <p>
+      Idependientemente si las he llegado a tocar o no, estas son algunas de las obras que más me gustan:
+      <ul>
+        <li><strong>Liebestraum No.3</strong> - Liszt</li>
+        <li><strong>Sonata No.3 11 K331</strong> - Mozart</li>
+        <li><strong>Polanesa Op.53</strong> - F.Chopin</li>
+        <li><strong>Etude S.161 No.3 "La Campanella"</strong> - Liszt</li>
+        <li><strong>Ballade No.1 Op.23</strong> - F.Chopin</li>
+      </ul>
+    </p>
+    <br>
+    <h2>Idiomas</h2>
       <p>
-        Soy bilingüe en español e inglés, y tengo un nivel intermedio de francés
+        Soy bilingüe español e inglés, y tengo un nivel intermedio de francés
         y un nivel principiante de chino. Además, hablo ruso a nivel nativo.
       </p>
-    </div>
-  </div>
+    <br>
+    <h2>Comprueba mi ELO de ajedrez</h2>
+    <p>
+        Puedes ver mi perfil de ajedrez en <a href="https://lichess.org/@/andressy">Lichess</a>.
+    </p>
+    <p>
+      O también puedes ver mi perfil de ajedrez en <a href="https://www.chess.com/member/yernau">Chess.com</a>.
+    </p>
+    <p>
+      O comprobar mi ELO oficial en <a href="https://ratings.fide.com/profile/535019352">FIDE</a>.
+    </p>
 
-  <br />
-  <div class="misc-item">
-    <h3>Contacto</h3>
-    <p>Puedes encontrarme en:</p>
-    <ul class="contact-links">
-      <li>
-        <a href="https://github.com/tu-usuario" target="_blank">GitHub</a>
-      </li>
-      <li>
-        <a
-          href="https://www.linkedin.com/in/andr%C3%A9-yermak-naumenko-b8489a21a/"
-          target="_blank"
-          >LinkedIn</a
-        >
-      </li>
-      <li>
-        <a href="mailto:andrewyernau@andrewyernau.info" target="_blank"
-          >Email</a
-        >
-      </li>
-    </ul>
-  </div>
-
-  <!-- <br />
-  <div class="misc-item image-gallery">
-    <h3>Galería de imágenes</h3>
-    <div class="gallery-container">
-      <button
-        hx-get="/api/gallery-image/prev"
-        hx-target="#gallery-content"
-        hx-swap="innerHTML"
-        class="gallery-nav-btn"
-      >
-        &lt;
-      </button>
-
-      <div id="gallery-content" class="image-container">
-        <div
-          hx-get="/api/gallery-image/current"
-          hx-trigger="load"
-          hx-swap="outerHTML"
-        >
-          <p>Cargando imagen...</p>
-        </div>
-      </div>
-
-      <button
-        hx-get="/api/gallery-image/next"
-        hx-target="#gallery-content"
-        hx-swap="innerHTML"
-        class="gallery-nav-btn"
-      >
-        &gt;
-      </button>
-    </div>
-  </div> -->
-
-  <br />
-  <div class="cursor-blink"></div>
-</section>
+    <p>
+      Si quieres jugar una partoda conmigo siempre puedes agregarme a amigos 😊.
+    </p>
+  
+  </section>
+{% endblock %}

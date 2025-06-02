@@ -1,15 +1,79 @@
-<section id="content" class="terminal-section active terminal-output">
- 
-  <h2>Quién Soy</h2>
-  <p>
-    Me llamo André y soy estudiante de Ingeniería Telemática en la Universidad Politécnica de Cartagena.
-    Desde pequeño, la tecnología ha sido mi gran pasión: desmontaba todo lo que encontraba, desde vehículos hasta placas base de altavoces, con la curiosidad de entender cómo funcionaban. 
-    Esa inquietud me llevó a sumergirme de lleno en este mundo y convertirlo en mi camino profesional como ingeniero.
-  </p>
-  <p>
-    Siempre estoy buscando nuevas formas de hacer las cosas, mejorar procesos o incluso crear soluciones desde cero. 
-    Esta mentalidad me ha llevado a desarrollar varios proyectos personales, algunos de los cuales menciono en la sección correspondiente, 
-    que han sido clave para mi crecimiento tanto personal como profesional.
-  </p>
-  <div class="cursor-blink"></div>
+{% extends "base.html" %}
+{% block title %}Sobre Mí | Portfolio{% endblock %}
+{% block content %}
+<section id="aboutme">
+  <div class="bloque-superior">
+    <h2>Sobre Mí</h2>
+    <p>
+      ¡Hola! Me llamo André Yermak y a día de hoy sigo estudiando Ingeniería Telemática en la Universidad Politécnica
+      de Cartagena, pero en un principio, me voy a graduar en junio de 2026.
+    </p>
+    <p>
+      Durante mi aprendizaje en la universidad, he descubierto que me encanta todo lo 
+      relacionado a la programación, la administración de redes y la ciberseguridad 
+      entre otras cosas.
+      <br>
+      Me muevo con soltura usando Git y GitHub para mis códigos, Docker para empaquetar 
+      mis ideas, y trabajo a diario con Linux, Python, Java, Simulink y otras tecnologías.
+    </p>
+  </div>
+
+  <div class="fila-inferior">
+    <div class="columna-contenido">
+    <h2>Qué he hecho</h2>
+    <p>
+      He participado en competiciones CTF, como el 
+      <strong>2025 eCTF del equipo MITRE</strong> y el 
+      <strong>2024 Talent4Cyber</strong>. En ellas, he aplicado mis conocimientos
+       en ciberseguridad, abordando retos de explotación web, análisis forense 
+       y criptografía mediante herramientas como Burp Suite para la manipulación 
+       de peticiones HTTP, Wireshark para el análisis de tráfico de red, Nmap y 
+       scripts de Python.
+       <br>
+       Estos CTFs me han enseñado a visualizar los problemas desde distintas perspectivas
+       y no limitarme a un único camino.
+    </p>
+    <p>
+      En mi formación universitaria, he desarrollado proyectos que incluyen:
+      <ul>
+        <li>Algoritmos de minimización de costes y sistemas de recomendación.</li>
+        <li>Una inteligencia artificial para ajedrez</li>
+        <li>Programas de comunicación concurrente y compartición de archivos 
+          entre equipos remotos utilizando Sockets TCP.</li>
+      </ul>
+    </p>
+    <p>
+      De forma extracurricular, he montado y gestiono un <strong>servidor local 
+        Linux</strong> que ofrece múltiples servicios, incluyendo una nube privada,
+        conexión VPN para acceso seguro y el alojamiento de páginas web.
+    </p>
+    </div>
+
+    <div class="columna-contenido">
+    <h2>Mis métodos de trabajo y mis habilidades</h2>
+    <p>
+      Me considero una persona muy curiosa y con un espíritu aventurero, siempre
+      tengo esa ilusión de aprender, mejorar y crear nuevas soluciones. 
+      No me limito a conformarme con lo existente si no satisface plenamente mis 
+      necesidades; esto me ha llevado a una <strong>mentalidad orientada a la 
+      solución y a una curiosidad proactiva</strong>.
+      <br>
+      Por otro lado, disfruto tanto el trabajo en colectivo,
+      donde se enriquecen las perspectivas, e incluso el trabajo individual
+      que me permite desarrollar una concentración profunda.
+    </p>
+    <p>
+      Este enfoque lo traduciría en una metodología de trabajo donde me involucro 
+      al 100% en los proyectos. Ante escenarios desconocidos, mi primer paso es 
+      buscar la formación suficiente y necesaria para desarrollar la idea, sin 
+      dudar en pedir ayuda y consejos a profesionales con más experiencia en el ámbito. 
+      <br>
+      Esta combinación de <strong>aprendizaje autónomo, desarrollo práctico 
+      y colaboración</strong> ha sido clave para mi crecimiento tanto personal 
+      como profesional, permitiéndome, cuando es necesario, <strong>crear 
+      soluciones innovadoras y a medida</strong>.
+    </p>
+    </div>
+  </div>
 </section>
+{% endblock %}
